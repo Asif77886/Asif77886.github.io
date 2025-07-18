@@ -48,17 +48,20 @@
             <h1 class="w3-jumbo w3-animate-top">Welcome to My Website</h1>
             <hr class="w3-border-grey" style="margin:auto;width:40%">
             <p class="w3-large w3-center">Created by Asif G. Shaikh</p>
-            <a class="transparent-button" href="#more">See More</a>
+            <button class="transparent-button" onclick="document.getElementById('popupModal').style.display='block'">See More</button>
         </div>
         <div class="w3-display-bottomleft w3-padding-large">
             <a href="https://www.w3schools.com/spaces" target="_blank">Visit W3Schools</a>
         </div>
     </div>
 
-    <!-- Hidden Section Revealed on Scroll -->
-    <div id="more" style="height: 100vh; background: #111; color: white; text-align: center; padding: 50px;">
-        <h2>More About This Site</h2>
-        <p>This is a sample landing page using W3.CSS and custom styling.</p>
+    <!-- Modal Popup -->
+    <div id="popupModal" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-animate-top w3-card-4 w3-black w3-text-white" style="max-width:400px; padding:20px; text-align:center;">
+            <span onclick="document.getElementById('popupModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h3>More About This Site</h3>
+            <p>This is a sample landing page using W3.CSS and clean design. Stay tuned for more!</p>
+        </div>
     </div>
 </body>
 </html>
