@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <style>
-        body, h1 {
-            font-family: "Raleway", sans-serif;
-        }
+  <title>Welcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body, h1 {
+      font-family: "Raleway", sans-serif;
+    }
 
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
 
-        .bgimg {
-            background-image: url('https://i.pinimg.com/originals/89/bb/e7/89bbe7d1742726f0f08fa3aa3e7ec98d.jpg');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-        }
+    .bgimg {
+      background-image: url('https://i.pinimg.com/originals/89/bb/e7/89bbe7d1742726f0f08fa3aa3e7ec98d.jpg');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    a {
+      text-decoration: none;
+    }
 
-        .transparent-button {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    .transparent-button {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-        .transparent-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    .transparent-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Modal styling */
+    .w3-modal-content {
+      background-color: #222;
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .w3-button.close {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-        <div class="w3-display-middle w3-center">
-            <h1 class="w3-jumbo w3-animate-top">Welcome to My Website</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <p class="w3-large w3-center">Created by Asif G. Shaikh</p>
-            <button class="transparent-button" onclick="document.getElementById('popupModal').style.display='block'">See More</button>
-        </div>
-        <div class="w3-display-bottomleft w3-padding-large">
-            <a href="https://www.w3schools.com/spaces" target="_blank">Visit W3Schools</a>
-        </div>
-    </div>
 
-    <!-- Modal Popup -->
-    <div id="popupModal" class="w3-modal" onclick="this.style.display='none'">
-        <div class="w3-modal-content w3-animate-top w3-card-4 w3-black w3-text-white" style="max-width:400px; padding:20px; text-align:center;">
-            <span onclick="document.getElementById('popupModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-            <h3>More About This Site</h3>
-            <p>This is a sample landing page using W3.CSS and clean design. Stay tuned for more!</p>
-        </div>
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-middle w3-center">
+      <h1 class="w3-jumbo w3-animate-top">Welcome to My Website</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Created by Asif G. Shaikh</p>
+      <button onclick="document.getElementById('popupModal').style.display='block'" class="transparent-button">See More</button>
     </div>
+    <div class="w3-display-bottomleft w3-padding-large">
+      <a href="https://www.w3schools.com/spaces" target="_blank">Visit W3Schools</a>
+    </div>
+  </div>
+
+  <!-- Modal Popup -->
+  <div id="popupModal" class="w3-modal" onclick="this.style.display='none'">
+    <div class="w3-modal-content w3-animate-top w3-card-4" onclick="event.stopPropagation()">
+      <button onclick="document.getElementById('popupModal').style.display='none'" class="w3-button close">&times;</button>
+      <h2>More About This Site</h2>
+      <p>This is a clean, professional modal popup using W3.CSS.</p>
+    </div>
+  </div>
+
 </body>
 </html>
