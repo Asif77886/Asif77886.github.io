@@ -59,6 +59,20 @@
       border: none;
       cursor: pointer;
     }
+
+    @media screen and (max-width: 600px) {
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between buttons */
+    align-items: center; /* center them horizontally */
+  }
+
+  .button-container button {
+    width: 80%; /* makes buttons full width on mobile */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -69,15 +83,18 @@
   <hr class="w3-border-grey" style="margin:auto;width:40%">
   <p class="w3-large w3-center">Created by ......</p>
 
+<!-- Buttons Container -->
+<div class="button-container">
   <!-- First button -->
   <button onclick="document.getElementById('popupModal').style.display='block'" class="transparent-button">See More</button>
 
   <!-- Second button -->
-  <a href="https://xhamster.desi/videos/hentai-teacher-with-huge-tits-gives-a-boobjob-to-student-english-xh1AgF1" target="_blank" class="transparent-button" style="margin-left: 10px;">Click if ur not a gay</a>
+  <a href="https://xhamster.desi/videos/hentai-teacher-with-huge-tits-gives-a-boobjob-to-student-english-xh1AgF1" target="_blank" class="transparent-button">Click if ur not Gay</a> 
 </div>
 
 
-  <!-- Modal Popup -->
+
+<!-- Modal Popup -->
   <div id="popupModal" class="w3-modal" onclick="this.style.display='none'">
     <div class="w3-modal-content w3-animate-top w3-card-4" onclick="event.stopPropagation()">
       <button onclick="document.getElementById('popupModal').style.display='none'" class="w3-button close">&times;</button>
