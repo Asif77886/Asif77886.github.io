@@ -16,27 +16,25 @@
       margin: 0;
     }
 
- .video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
 
-.video-background video {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
 
-.overlay-content {
-  position: relative;
-  z-index: 2;
-}
-
+    .overlay-content {
+      position: relative;
+      z-index: 2;
     }
 
     a {
@@ -77,50 +75,48 @@
     }
 
     @media screen and (max-width: 600px) {
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* space between buttons */
-    align-items: center; /* center them horizontally */
-  }
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
 
-  .button-container button {
-    width: 80%; /* makes buttons full width on mobile */
-  }
-}
-
+      .button-container button {
+        width: 80%;
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- Video Background -->
-<div class="video-background">
-  <video autoplay muted loop playsinline>
-    <source src="https://motionbgs.com/media/660/bmw-carros-driving.960x540.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- Background Video -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="https://motionbgs.com/media/660/bmw-carros-driving.960x540.mp4" type="video/mp4">
+    </video>
+  </div>
 
-  <!-- Content Over Video -->
-  <div class="w3-display-container w3-animate-opacity w3-text-white overlay-content">
+  <!-- Overlay Content -->
+  <div class="overlay-content w3-display-container w3-animate-opacity w3-text-white" style="height:100vh;">
     <div class="w3-display-middle w3-center">
       <h1 class="w3-jumbo w3-animate-top">Wsp Bro!!</h1>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
       <p class="w3-large w3-center"></p>
-      <div class="button-container">
+
+      <!-- Buttons -->
+      <div class="button-container" style="margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
         <button onclick="document.getElementById('popupModal').style.display='block'" class="transparent-button">See More</button>
-        <a href="https://xhamster.desi/videos/hentai-teacher-with-huge-tits-gives-a-boobjob-to-student-english-xh1AgF1" target="_blank" class="transparent-button">Click if ur not Gay</a> 
+        <a href="https://xhamster.desi/videos/hentai-teacher-with-huge-tits-gives-a-boobjob-to-student-english-xh1AgF1" target="_blank" class="transparent-button">Click if ur not bad</a> 
       </div>
     </div>
+
     <div class="w3-display-bottomleft w3-padding-large">
-      <a href="https://www.w3schools.com/spaces" target="_blank">Z.....</a>
+      <a href="https://www.w3schools.com/spaces" target="_blank" style="color:white;">Z.....</a>
     </div>
   </div>
-</div>
 
-
-
-
-<!-- Modal Popup -->
+  <!-- Modal -->
   <div id="popupModal" class="w3-modal" onclick="this.style.display='none'">
     <div class="w3-modal-content w3-animate-top w3-card-4" onclick="event.stopPropagation()">
       <button onclick="document.getElementById('popupModal').style.display='none'" class="w3-button close">&times;</button>
